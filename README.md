@@ -1,15 +1,10 @@
-### Date created
-Include the date you created this project and README file.
+README
 
-### Project Title
-Replace the Project Title
+This is a README for Vincent Nieto's bikeshare.py program. This is an interactive program made to explore US bikeshare data for the Udacity nanodegree python project.
 
-### Description
-Describe what your project is about and what it does
+I used a few references that helped me write this program, aside from the tutorial videos and quizzes:
 
-### Files used
-Include the files used
-
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+1. https://pandas.pydata.org/
+2. Python Pocket Reference: Python In Your Pocket (Pocket Reference (O'Reilly)) Fifth Edition by Mark Lutz
+3. Learning Python, 5th Edition Fifth Edition by Mark Lutz
+4. https://www.python.org/doc/
