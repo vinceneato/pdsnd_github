@@ -9,6 +9,7 @@ import numpy as np
 CITY_DATA = {'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv'}
+months = ["january", "february", "march", "april", "may", "june"]
 days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 def get_filters():
     """
@@ -68,7 +69,6 @@ def load_data(city, month, day):
 
     # Creating a list so that the index of each element can be matched to the user-input (month).
     if month != 'all':
-        months = ["january", "february", "march", "april", "may", "june"]
         month_int = months.index(month) + 1
         df = df[df['month'] == month_int]
 
@@ -87,7 +87,6 @@ def time_stats(df):
     start_time = time.time()
 
     # Display the most common month
-    months = ["january", "february", "march", "april", "may", "june"]
     print("The most common month is ", months[df['month'].mode().values[0] - 1])
 
     # Display the most common day of week
