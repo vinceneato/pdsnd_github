@@ -1,5 +1,5 @@
 """
-Interactive bikeshare data program by Vincent M Nieto.
+Interactive bikeshare data program by Vincent M Nieto created on November 17th, 2019
 """
 
 import time
