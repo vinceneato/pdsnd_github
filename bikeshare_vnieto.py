@@ -9,7 +9,8 @@ import numpy as np
 CITY_DATA = {'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv'}
-
+months = ["january", "february", "march", "april", "may", "june"]
+days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -68,13 +69,11 @@ def load_data(city, month, day):
 
     # Creating a list so that the index of each element can be matched to the user-input (month).
     if month != 'all':
-        months = ["january", "february", "march", "april", "may", "june"]
         month_int = months.index(month) + 1
         df = df[df['month'] == month_int]
 
     # Creating a list so that the index of each element can be meatched to the user-input (day).
     if day != 'all':
-        days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
         days_int = days.index(day)
         df = df[df['day_of_week'] == days_int]
 
@@ -87,12 +86,10 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # display the most common month
-    months = ["january", "february", "march", "april", "may", "june"]
+    # Display the most common month
     print("The most common month is ", months[df['month'].mode().values[0] - 1])
 
     # Display the most common day of week
-    days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
     print("The most common day of the week is ", days[df['day_of_week'].mode().values[0]])
 
     # Display the most common start hour
